@@ -1,42 +1,39 @@
 <template>
-  <el-row class="warp">
-    <el-col :span="24" class="warp-breadcrum">
-      <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/' }"><b>首页</b></el-breadcrumb-item>
-        <el-breadcrumb-item>用户列表</el-breadcrumb-item>
-      </el-breadcrumb>
-    </el-col>
+  <div>
+    <el-row>
+      <el-col :span="24">
+        <div class="grid-content bg-purple-dark">
+          <div id="back"></div>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="4"><div class="grid-content bg-purple"><h3>姓名</h3></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple-light"><h3>苏敏</h3></div></el-col>
+      <el-col :span="4"><div class="grid-content bg-purple"><h3>性别</h3></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple-light"><h3>男</h3></div></el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="4"><div class="grid-content bg-purple"><h3>学历</h3></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple-light"><h3>本科</h3></div></el-col>
+      <el-col :span="4"><div class="grid-content bg-purple"><h3>学历</h3></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple-light"><h3>本科</h3></div></el-col>
+    </el-row>
 
-    <el-col :span="24" class="warp-main" v-loading="loading" element-loading-text="拼命加载中">
-        <!--工具条-->
-        <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
-          <el-form :inline="true" :model="filters">
-            <el-form-item>
-              <el-input v-model="filters.name" placeholder="用户名/姓名/昵称" style="min-width: 240px;" @keyup.enter.native="handleSearch"></el-input>
-            </el-form-item>
-            <el-form-item>
-              <el-button type="primary" @click="handleSearch">查询</el-button>
-            </el-form-item>
-          </el-form>
-        </el-col>
+    <el-row>
+      <el-col :span="4"><div class="grid-content bg-purple"><h3>技能与特长</h3></div></el-col><br/>
+    </el-row>
+    <el-row>
+      <el-col :span="24"><div class="grid-content bg-purple"><h3>技能与特长XXXX'xX</h3></div></el-col>
+    </el-row>
 
-      <!--列表-->
-      <el-table :data="users" highlight-current-row style="width: 100%;">
-        <el-table-column type="index" width="60">
-        </el-table-column>
-        <el-table-column prop="name" label="姓名" width="120" sortable>
-        </el-table-column>
-        <el-table-column prop="nickname" label="昵称" width="120" sortable>
-        </el-table-column>
-        <el-table-column prop="sex" label="性别" width="100" :formatter="formatSex" sortable>
-        </el-table-column>
-        <el-table-column prop="email" label="邮箱" min-width="160" sortable>
-        </el-table-column>
-        <el-table-column prop="addr" label="地址" sortable>
-        </el-table-column>
-      </el-table>
-    </el-col>
-  </el-row>
+    <el-row>
+      <el-col :span="4"><div class="grid-content bg-purple"><h3>工作经验</h3></div></el-col><br/>
+    </el-row>
+    <el-row>
+      <el-col :span="24"><div class="grid-content bg-purple"><h3>技能与特长XXXX'xX</h3></div></el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>
@@ -67,5 +64,26 @@
 </script>
 
 <style scoped>
-
+  #back{
+    width: 200px;
+    height: 200px;
+    background-color: #00C1DE;
+    border-radius: 100px;
+    margin: 0 auto;
+  }
+  .bg-purple-dark {
+    background: #fff;
+    height: 200px;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+    text-align: center;
+  }
 </style>

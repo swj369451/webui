@@ -5,11 +5,8 @@
       <div class="topbar-logo topbar-btn">
         <a href="/"><img src="../assets/logo.png" style="padding-left:8px;"></a>
       </div>
-      <div class="topbar-logos" v-show="!collapsed">
-        <a href="/"><img src="../assets/logotxt.png"></a>
-      </div>
       <div class="topbar-title">
-        <span style="font-size: 18px;color: #fff;">管理系统</span>
+        <span style="font-size: 18px;color: #fff;">个人网页</span>
       </div>
       <div class="topbar-account topbar-btn">
         <el-dropdown trigger="click">
